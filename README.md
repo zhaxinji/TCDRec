@@ -1,4 +1,4 @@
-# **Disentangling Latent Confounders via Tri-channel Conditional Diffusion for Multimodal Recommendation**
+# **Tri-channel Conditional Diffusion with Cross-modal Causal Alignment for Multimodal Recommendation**
 
 ## 📚 Overview of TCDRec
 
