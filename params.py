@@ -38,7 +38,7 @@ def parse_args():
     parser.add_argument('--item_knn_k', type=int, default=10,
                         help='Select the 10 items most similar to the target item to build the item graph')
 
-    parser.add_argument('--i_mm_image_weight', type=float, default=0,
+    parser.add_argument('--i_mm_image_weight', type=float, default=0.1,
                         help='The proportion of visual feat in item graph.')
     parser.add_argument('--u_mm_image_weight', type=float, default=0.2,
                         help='The proportion of visual feat in user graph.')

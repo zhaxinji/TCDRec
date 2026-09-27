@@ -84,10 +84,12 @@ class Net:
             test_score_output = res_output(epoch_idx, test_start_time, time(), test_result, t_or_v="test")
             self.logger.info(test_score_output)
 
+            # Early stopping and model selection are based on the validation score.
             self.best_valid_score, self.cur_step, stop_flag, update_flag = early_stopping(
-                test_score, self.best_valid_score, self.cur_step, self.stopping_step)
+                valid_score, self.best_valid_score, self.cur_step, self.stopping_step)
 
-            self.best_valid_result[epoch_idx] = self.best_valid_score
+            # Record the validation score of each epoch.
+            self.best_valid_result[epoch_idx] = valid_score
 
             if update_flag:
                 update_result(self, test_result)
